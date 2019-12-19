@@ -1,0 +1,76 @@
+{
+    "name": "OpenDNS",
+    "description": "OpenDNS was founded in 2006 and acquired by Cisco in 2015. Today, more than 12,000 business worldwide rely on our enterprise security products. Cisco Umbrella is a cloud security platform that provides the first line of defense against threats on the i...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20022-opendns.jpg",
+    "tags": [
+        "have api",
+        "isp",
+        "networks",
+        "relative data",
+        "security",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/opendns\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "OpenDNS",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20022-opendns.jpg",
+            "humanURL": "https:\/\/www.opendns.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/opendns.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/opendns-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/opendns-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "https:\/\/blog.opendns.com\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/blog.opendns.com\/feed\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/opendns"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/docs.opendns.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "support@opendns.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/opendns"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/OpenDNS"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.opendns.com\/"
+        }
+    ]
+}
