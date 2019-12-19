@@ -1,0 +1,224 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "OpenDNS",
+        "description": "",
+        "termsOfService": ""
+    },
+    "servers": [
+        "https"
+    ],
+    "paths": {
+        "\/networkdevices": {
+            "POST": {
+                "summary": "Network Devices",
+                "description": "The Network Device Registration API provides a way for networking hardware vendors to integrate their network devices with the OpenDNS Umbrella Dashboard. ",
+                "operationId": "NetworkDevices",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "model",
+                        "in": "query",
+                        "description": "The model name of the device. Must be unique to your organization."
+                    },
+                    {
+                        "name": " macAddress",
+                        "in": "query",
+                        "description": "The MAC address of the device (formatted as 12 characters, no hyphens or colons). Must be unique."
+                    },
+                    {
+                        "name": "label",
+                        "in": "query",
+                        "description": "A label for the device; this is how the device will be designated in the customer???s Umbrella dashboard. This label should be unique to your organization."
+                    },
+                    {
+                        "name": "serialNumber",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "A text tag that describes the device (or this particular origin assigned to the device). Must be unique to your organization."
+                    }
+                ]
+            }
+        },
+        "\/domains\/categories\/": {
+            "get": {
+                "summary": "Domain Status and Categorization",
+                "description": "This API method returns the domain status, which the quickest and easiest way to know whether a domain has been flagged as malicious by the OpenDNS Security Labs team (score of -1 for status), if it is believed to be safe (score of 1), or if it has yet to be given a status (score of 0). ",
+                "operationId": "DomainStatus",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/domains\/score\/{domain}": {
+            "get": {
+                "summary": "Domain Scores",
+                "description": "This API method is the quickest and easiest way to know whether a domain has been flagged as malicious by the OpenDNS security team (score of -1), if it is believed to be safe (score of 1), or if it hasn't been categorized yet (score of 0).",
+                "operationId": "DomainScore",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domain",
+                        "in": "path",
+                        "description": "Domain Name."
+                    }
+                ]
+            }
+        },
+        "\/search\/": {
+            "get": {
+                "summary": "Pattern Search",
+                "description": "To perform a pattern search in the API, use the \/search\/ endpoint, append a RegEx pattern search to the API query and a start time.",
+                "operationId": "PatternSearch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/recommendations\/{name}\/": {
+            "get": {
+                "summary": "Co-Occurrences for a Domain",
+                "description": "This API method returns a list of co-occurences for the specified domain. A co-occurrence is when two or more domains are being accessed by the same users within a small window of time. Being a co-occurrence isn't necessarily a bad thing, legitimate sites co-occur with each other as a part of normal web activity. However, unusual or suspicious co-occurence can provide additional information regarding attacks.",
+                "operationId": "CoOccurrencesDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Domain Name"
+                    }
+                ]
+            }
+        },
+        "\/links\/{name}\/": {
+            "get": {
+                "summary": "Related Domains",
+                "description": "This API method returns a list of domain names that have been frequently seen requested b around the same time (up to 60 seconds before or after) as the given domain name, but that are not frequently associated with other domain names.",
+                "operationId": "RelatedDomains",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Domain Name"
+                    }
+                ]
+            }
+        },
+        "\/security\/{name}\/": {
+            "get": {
+                "summary": "Security Information",
+                "description": "The security information API method contains multiple scores or security features, each of which can be used to determine relevant datapoints to build insight on the reputation or security risk posed by the site. No one security information feature is conclusive, instead these features should be looked at in conjunction with one another as part of your security research.",
+                "operationId": "SecurityInformation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Domain Name",
+                        "in": "path",
+                        "description": "Domain Name"
+                    }
+                ]
+            }
+        },
+        "\/domains\/{name}\/latest_tags": {
+            "get": {
+                "summary": "Tagging",
+                "description": "This endpoint returns the date range when the domain being queried was a part of the OpenDNS block list. A common use case is to find how long a domain has been in the block list for domains being blocked currently. However it will also show a record of the history of the domain in the OpenDNS blocklis",
+                "operationId": "DomainTagging",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Domain Name",
+                        "in": "path",
+                        "description": "Domain Name"
+                    }
+                ]
+            }
+        },
+        "\/dnsdb\/{name}\/a\/": {
+            "get": {
+                "summary": "DNS RR History",
+                "description": "The DNS database can be used to query the history that OpenDNS has seen for a given domain.",
+                "operationId": "RrHistory",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Domain Name"
+                    }
+                ]
+            }
+        },
+        "\/bgp_routes\/ip\/{ip}\/": {
+            "get": {
+                "summary": "IP Address History",
+                "description": "To help better understand how IP addresses are related to each other and to the regional registries, the API can provide data about ASN and IP relationships. You can also find out more about the IP space associated with an AS with this endpoint and correlate BGP routing information between AS.",
+                "operationId": "IpAddressHistory",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ip",
+                        "in": "path",
+                        "description": "The IP Address."
+                    }
+                ]
+            }
+        },
+        "\/whois\/emails\/": {
+            "get": {
+                "summary": "Whois",
+                "description": "This API method returns the WHOIS information for the specified email address(es), nameserver(s) and domains. You can also search by multiple email addresses or multiple nameservers.",
+                "operationId": "Whois",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/ips\/{ip}\/latest_domains": {
+            "get": {
+                "summary": "Latest Malicious Domains",
+                "description": "The latest_domains endpoint shows whether the IP address you???ve entered as input has any known malicious domains associated with it.",
+                "operationId": "LatestMaliciousDomains",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ip",
+                        "in": "path",
+                        "description": "The IP Address."
+                    }
+                ]
+            }
+        },
+        "\/events": {
+            "put": {
+                "summary": "Post Event",
+                "description": "Posts a Malware event to the API for processing and optionally adding to a customer's domain lists.",
+                "operationId": "PostEvent",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/domains": {
+            "get": {
+                "summary": "Get Domains",
+                "description": "To gather the lists of domains already added to the shared customer???s domain list, run a GET request against the domains endpoint of the API.",
+                "operationId": "GetDomains",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Domain",
+                "description": "To delete a domain from the shared customer???s domain list, run a DELETE request against the domains endpoint of the API. ",
+                "operationId": "DeleteDomain",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
