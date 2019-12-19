@@ -1,0 +1,458 @@
+{
+    "id": "9d2f78cf5c447f833d3486c7c3251379",
+    "name": "OpenDNS",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "b56287528247304dfc01a9dd6d888600",
+            "name": "Network Devices",
+            "url": "https\/networkdevices",
+            "description": "The Network Device Registration API provides a way for networking hardware vendors to integrate their network devices with the OpenDNS Umbrella Dashboard. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "model",
+                    "description": "The model name of the device. Must be unique to your organization.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": " macAddress",
+                    "description": "The MAC address of the device (formatted as 12 characters, no hyphens or colons). Must be unique.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "label",
+                    "description": "A label for the device; this is how the device will be designated in the customer???s Umbrella dashboard. This label should be unique to your organization.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "serialNumber",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "A text tag that describes the device (or this particular origin assigned to the device). Must be unique to your organization.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "c688a98807a50cd5e0a03544b5135b0b",
+            "name": "Domain Status and Categorization",
+            "url": "https\/domains\/categories\/",
+            "description": "This API method returns the domain status, which the quickest and easiest way to know whether a domain has been flagged as malicious by the OpenDNS Security Labs team (score of -1 for status), if it is believed to be safe (score of 1), or if it has yet to be given a status (score of 0). ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "2cfc5da1f34fb1b40b8b489b2501f518",
+            "name": "Domain Scores",
+            "url": "https\/domains\/score\/{domain}",
+            "description": "This API method is the quickest and easiest way to know whether a domain has been flagged as malicious by the OpenDNS security team (score of -1), if it is believed to be safe (score of 1), or if it hasn't been categorized yet (score of 0).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domain",
+                    "description": "Domain Name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "daa7c81ae56fb91bcf0d4f5e60645856",
+            "name": "Pattern Search",
+            "url": "https\/search\/",
+            "description": "To perform a pattern search in the API, use the \/search\/ endpoint, append a RegEx pattern search to the API query and a start time.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec3fa65d0623d52123383ec826231586",
+            "name": "Co-Occurrences for a Domain",
+            "url": "https\/recommendations\/{name}\/",
+            "description": "This API method returns a list of co-occurences for the specified domain. A co-occurrence is when two or more domains are being accessed by the same users within a small window of time. Being a co-occurrence isn't necessarily a bad thing, legitimate sites co-occur with each other as a part of normal web activity. However, unusual or suspicious co-occurence can provide additional information regarding attacks.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Domain Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "0b00c4050c1340204ece66e9f47f496d",
+            "name": "Related Domains",
+            "url": "https\/links\/{name}\/",
+            "description": "This API method returns a list of domain names that have been frequently seen requested b around the same time (up to 60 seconds before or after) as the given domain name, but that are not frequently associated with other domain names.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Domain Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "664fd02559aefeff9c94ed78d638055a",
+            "name": "Security Information",
+            "url": "https\/security\/{name}\/",
+            "description": "The security information API method contains multiple scores or security features, each of which can be used to determine relevant datapoints to build insight on the reputation or security risk posed by the site. No one security information feature is conclusive, instead these features should be looked at in conjunction with one another as part of your security research.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Domain Name",
+                    "description": "Domain Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "6b0cc13b7762df04b61f8bc8634874c6",
+            "name": "Tagging",
+            "url": "https\/domains\/{name}\/latest_tags",
+            "description": "This endpoint returns the date range when the domain being queried was a part of the OpenDNS block list. A common use case is to find how long a domain has been in the block list for domains being blocked currently. However it will also show a record of the history of the domain in the OpenDNS blocklis",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Domain Name",
+                    "description": "Domain Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "9668302e75edfcc213179170268e345b",
+            "name": "DNS RR History",
+            "url": "https\/dnsdb\/{name}\/a\/",
+            "description": "The DNS database can be used to query the history that OpenDNS has seen for a given domain.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Domain Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "9d9689eb9cf61eedac88fd2f86c08011",
+            "name": "IP Address History",
+            "url": "https\/bgp_routes\/ip\/{ip}\/",
+            "description": "To help better understand how IP addresses are related to each other and to the regional registries, the API can provide data about ASN and IP relationships. You can also find out more about the IP space associated with an AS with this endpoint and correlate BGP routing information between AS.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ip",
+                    "description": "The IP Address.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "5477d7a56669ab25f3808d2a31c091eb",
+            "name": "Whois",
+            "url": "https\/whois\/emails\/",
+            "description": "This API method returns the WHOIS information for the specified email address(es), nameserver(s) and domains. You can also search by multiple email addresses or multiple nameservers.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "18efea2fb175434a7513f9bee41c3633",
+            "name": "Latest Malicious Domains",
+            "url": "https\/ips\/{ip}\/latest_domains",
+            "description": "The latest_domains endpoint shows whether the IP address you???ve entered as input has any known malicious domains associated with it.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ip",
+                    "description": "The IP Address.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "5c6ca06e94b6483b33cc82531e30e3c4",
+            "name": "Post Event",
+            "url": "https\/events",
+            "description": "Posts a Malware event to the API for processing and optionally adding to a customer's domain lists.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "3b3112d627ab4fdb1ff86daa2bdc571c",
+            "name": "Get Domains",
+            "url": "https\/domains",
+            "description": "To gather the lists of domains already added to the shared customer???s domain list, run a GET request against the domains endpoint of the API.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        },
+        {
+            "id": "d75a8ae2bb846cbc920befffa02f01b8",
+            "name": "Delete Domain",
+            "url": "https\/domains",
+            "description": "To delete a domain from the shared customer???s domain list, run a DELETE request against the domains endpoint of the API. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9d2f78cf5c447f833d3486c7c3251379",
+            "rawModeData": ""
+        }
+    ]
+}
