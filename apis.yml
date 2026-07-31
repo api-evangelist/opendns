@@ -1,8 +1,26 @@
 aid: opendns
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/opendns.png
 name: OpenDNS
-description: 'OpenDNS is a company surfaced as a portfolio company of greylock and added to the API Evangelist
-  network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'OpenDNS is a cloud-delivered recursive DNS and internet security service
+  founded in 2005 and acquired by Cisco in 2015, where its enterprise capabilities now
+  form the foundation of the Cisco Umbrella platform. OpenDNS continues to offer free
+  consumer products - OpenDNS Home and OpenDNS Family Shield - providing recursive DNS
+  resolution, phishing and malware blocking, and content filtering with parental controls
+  across every device on a home network, all managed through the OpenDNS dashboard.
+  Enterprise DNS-layer security, secure web gateway, and the Investigate threat-intelligence
+  API have migrated to Cisco Umbrella (umbrella.cisco.com). Added to the API Evangelist
+  network as a Greylock portfolio company in the cybersecurity sector.'
 url: https://raw.githubusercontent.com/api-evangelist/opendns/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +30,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Cybersecurity
+- DNS
+- Security
+- Content Filtering
+- Threat Intelligence
+- Networking
+- Cisco
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/opendns-domain-security.yml
 - type: Website
   url: https://www.opendns.com/
+- type: SignUp
+  url: https://signup.opendns.com/homefree/
+- type: Login
+  url: https://login.opendns.com/
+- type: Support
+  url: https://community.cisco.com/t5/opendns/bd-p/openDNS
+- type: PrivacyPolicy
+  url: https://www.opendns.com/privacy-policy/
+- type: TermsOfService
+  url: https://umbrella.cisco.com/terms/
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
