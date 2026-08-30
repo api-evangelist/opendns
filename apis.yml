@@ -58,6 +58,11 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/cisco/
+  name: Cisco
+  x-relationship: acquired
+  x-evidence: "OpenDNS is a cloud-delivered recursive DNS and internet security service founded in 2005 and acquired by Cisco in 2015, where its enterprise capabilities now form the foundation of the Cisco Umbrella platform."
 - type: DomainSecurity
   url: security/opendns-domain-security.yml
 - type: Website
